@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+:root {
+  font-size: 16px;
+  --Bright-Red: rgb(242, 95, 58);
+  --Dark-Blue: hsl(228, 39%, 23%);
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very-pale-red: #ffefeb;
+  --vary-light-gray: hsl(0, 0%, 98%);
+}
+section {
+  padding-block: 4.5rem;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+main {
+  overflow-x: hidden;
+}
+.navbar {
+  transition: 0.3s linear;
+}
+.main-btn {
+  background-color: var(--Bright-Red) !important;
+  color: var(--vary-light-gray) !important;
+  box-shadow: var(--Bright-Red) 0px 0px 14px !important;
+  transition: opacity 0.3s linear;
+}
+
+.main-btn:hover {
+  opacity: 0.5;
+}
+
+.nav-link {
+  color: var(--Dark-Blue) !important;
+  transition: color 0.3s linear;
+}
+
+.nav-link:hover {
+  color: var(--dark-grayish-blue) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../images/icon-hamburger.svg);
+}
+
+.navbar-toggler-icon.close {
+  background-image: url(../images/icon-close.svg);
+}
+
+@media (width<768px) {
+  #navbarNav {
+    background: #fff;
+    position: absolute;
+    width: 95%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+  }
+}
+/* intro section */
+#intro-sect {
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-position: 115% -80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (width<992px) {
+  #intro-sect {
+    background-position: 150px -150px;
+  }
+}
+@media (width<767px) {
+  #intro-sect {
+    background-position: 100px -20px;
+  }
+}
+#intro-content {
+  min-height: 100vh;
+}
+
+#intro-title {
+  color: var(--Dark-Blue);
+}
+
+/* features sections */
+#features-sect {
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-position: -70vh 300px;
+  background-repeat: no-repeat;
+}
+@media (width<992px) {
+  #features-sect {
+    background-image: none;
+  }
+}
+
+#feat-title {
+  color: var(--Dark-Blue);
+}
+#feat-details {
+  counter-reset: num;
+}
+.counter {
+  counter-increment: num;
+  background-color: var(--Bright-Red);
+  border-radius: 40px;
+  padding-block: 0.2rem;
+  color: var(--vary-light-gray);
+  margin-right: 10px;
+  padding-inline: 1rem;
+}
+.card-title {
+  position: relative;
+  color: var(--Dark-Blue);
+  height: fit-content;
+}
+
+.card-title::before {
+  content: "";
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-block: 0.8rem;
+  background-color: var(--very-pale-red);
+  z-index: -1;
+  display: none;
+}
+
+.swiper-wrapper .swiper-slide {
+  min-width: calc(100% / 3) !important;
+}
+
+.swiper-pagination {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  position: static;
+  margin-top: 1.875rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  padding: 0.4rem;
+  opacity: 1;
+  border: 2px solid var(--Bright-Red);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--Bright-Red);
+}
+@media (width<992px) {
+  .card-title::before {
+    display: block;
+  }
+}
+
+@media (width>992px) {
+  .counter {
+    position: absolute;
+    left: -4rem;
+  }
+}
+
+.sect-title {
+  color: var(--Dark-Blue);
+}
+/* contact */
+
+#contact-sect {
+  background-color: var(--Bright-Red);
+  background-image: url(../images/bg-tablet-pattern-copy.svg);
+  background-position: -200px 10px;
+  background-repeat: no-repeat;
+}
+@media (width<767px) {
+  #contact-sect {
+    background-position: -400px 140px;
+  }
+}
+#contact-btn {
+  color: var(--Bright-Red) !important;
+  background-color: #fff !important;
+}
+
+@media (width<992px) {
+  #contact-btn {
+    margin-inline: auto !important ;
+  }
+}
+
+/* footer */
+
+footer {
+  background-color: var(--very-dark-blue);
+}
+
+#footer-links a:hover {
+  transition: 0.3s linear;
+  color: var(--Bright-Red) !important;
+}
+.form-group input {
+  border: 2px solid #fff !important;
+  transition: 0.3s linear;
+}
+.form-group::before {
+  transition: 0.3s linear;
+  content: "Please insert a vaild email";
+  position: absolute;
+  top: 100%;
+  color: red;
+  left: 10px;
+  visibility: hidden;
+}
+.form-group.error::before {
+  visibility: visible;
+}
+.form-group.error input {
+  border: 2px solid red !important;
+  color: red !important;
+}
+
+#social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+#copyright {
+  color: var(--dark-grayish-blue);
+}
+
+@media (width<992px) {
+  input::placeholder {
+    font-size: 1rem;
+  }
+  #copyright {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    text-align: center !important;
+    transform: translateX(-50%);
+  }
+}
+
+@media (width<375px) {
+  input::placeholder {
+    font-size: 0.7rem;
+  }
+}
