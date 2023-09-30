@@ -55,7 +55,7 @@ main {
   background-image: url(../images/icon-close.svg);
 }
 
-@media (width<768px) {
+@media (width<992px) {
   #navbarNav {
     background: #fff;
     position: absolute;
