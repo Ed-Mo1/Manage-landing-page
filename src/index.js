@@ -22,7 +22,7 @@ const reviews = [
     "customer name": "Shanai Gough",
     comment: ` “Their software allows us to track, manage and collaborate on our projects 
     from anywhere. It keeps the whole team in-sync without being intrusive.”`,
-    avatar: `../images/avatar-shanai.png`,
+    avatar: `./images/avatar-shanai.png`,
   },
 ];
 const wraperContent = document.querySelector(".swiper-wrapper");
